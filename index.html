@@ -2,97 +2,100 @@
 <!-- saved from url=(0073)https://galton.uchicago.edu/faculty/InMemoriam/worsley/research/surfstat/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>SurfStat</title>
-<link rel="stylesheet" href="SurfStat_files/base.css">
+
 </head>
 <body>
 </p><center>
 <h1>SurfStat</h1>
 <h2>A Matlab toolbox for the statistical analysis of univariate and multivariate surface and volumetric data using linear mixed effects models and random field theory</h2>
 </br>
-<b>Developed by <a href="http://www.math.mcgill.ca/keith">Keith J. Worsley</a></b></br></br>
-Orginally hosted on http://www.math.mcgill.ca/keith</br></br>
+<b>Developed by <a href="http://www.math.mcgill.ca/keith">Keith J. Worsley (1951-2009)</a></b></br></br>
+<img src="SurfStat_files/keith_worsley.jpg">
+</br>
+</br>
+<p>Orginally hosted on http://www.math.mcgill.ca/keith</br></br>
+Moved here to ensure continuity. </br>
 <a href="SurfStat_files/surfstat.zip">Download it here!</a></br></br>
-<em>Updated 21 February, 2009</em>
+</p>
 </center><br>
 </br>
 </br>
 
-SurfStat is a Matlab toolbox for the statistical analysis of univariate and multivariate surface and volumetric data using linear mixed effects models and random field theory. It is inspired by Jason Lerch's
+<p>SurfStat is a Matlab toolbox for the statistical analysis of univariate and multivariate surface and volumetric data using linear mixed effects models and random field theory. It is inspired by Jason Lerch's
 <a href="http://wiki.bic.mni.mcgill.ca/index.php/ThicknessStatistics">Thickness Statistics</a> written in <a href="http://en.wikipedia.org/wiki/R_%28%20programming_language%29">R</a>, and Jonathan Taylor's BrainStat, part of <a href="http://neuroimaging.scipy.org/">NIPY</a>, written in <a href="http://www.python.org/Python">Python</a>.
 It is intended for cortical thickness data on triangular meshes, either for the whole cortex or one for each hemisphere. It will handle any triangulated surface data, written in <a href="http://surfer.nmr.mgh.harvard.edu/FreeSurfer">FreeSurfer</a><a> or </a><a href="http://wiki.bic.mni.mcgill.ca/index.php/ObjectFiles">MNI object</a> format.
-The only requirement is that the triangulation scheme must be the same for all surfaces, i.e. the data must be registered to a common surface.<p>
+The only requirement is that the triangulation scheme must be the same for all surfaces, i.e. the data must be registered to a common surface.</p>
+</br>
+</br>
+<h3>Reference:</h3>
+<p>Worsley, K.J.,  Taylor, J.E., Carbonell, F., Chung, M.K., Duerden, E.,  Bernhardt, B.,  Lyttelton, O., Boucher, M., Evans, A.C. (2009). <a href="https://galton.uchicago.edu/faculty/InMemoriam/worsley/research/surfstat/surfstat/poster.htm">SurfStat: A Matlab toolbox for the statistical analysis of univariate and multivariate surface and volumetric data using linear mixed effects models and random field theory.</a> <i>NeuroImage</i>, OHBM poster, accepted.</p>
 
-<b>Reference:</b>
-</p><li>Worsley, K.J.,  Taylor, J.E., Carbonell, F., Chung, M.K., Duerden, E.,  Bernhardt, B.,  Lyttelton, O., Boucher, M., Evans, A.C. (2009). <a href="https://galton.uchicago.edu/faculty/InMemoriam/worsley/research/surfstat/surfstat/poster.htm">SurfStat: A Matlab toolbox for the statistical analysis of univariate and multivariate surface and volumetric data using linear mixed effects models and random field theory.</a> <i>NeuroImage</i>, OHBM poster, accepted.<p>
-
-</p><hr>
-<h3>New features in the latest version</h3>
-
-</li><li>SurfStat now does statistical analysis for volumetric data, e.g. <a href="#vbm">VBM</a>, <a href="#dbm">DBM</a> and <a href="#pet">PET</a> data.
+</br>
+</br>
+<h3>Features of the legacy version (21 February 2009)</h3>
+<ul>
+<li>SurfStat now does statistical analysis for volumetric data, e.g. <a href="#vbm">VBM</a>, <a href="#dbm">DBM</a> and <a href="#pet">PET</a> data.
 </li><li>New viewers added for volumetric data.
 </li><li><a href="#map">Memory mapping</a> has been added to cope with very large data sets. There is now essentially
 no limit on the size of the data, but you will need some free disk space, equal to twice the size of the data, for scratch space.
-
-<hr>
-<h3>Features of the previous version</h3>
-
-Its main engine fits fixed effects and mixed effects, univariate and multivariate, linear models
-and makes inference using T, F, <a href="http://en.wikipedia.org/wiki/Hotelling%27s_T-square_distribution">Hotelling's T<sup>2</sup></a> and <a href="http://mrw.interscience.wiley.com/emrw/9780470011812/eob/article/b2a10081/current/abstract">Roy's maximum root</a> statistics. Features:<p>
-</p></li><li> Random field theory (RFT) for peaks and clusters, as well as False Discovery Rate (FDR).
+</li><li>Its main engine fits fixed effects and mixed effects, univariate and multivariate, linear models
+and makes inference using T, F, <a href="http://en.wikipedia.org/wiki/Hotelling%27s_T-square_distribution">Hotelling's T<sup>2</sup></a> and <a href="http://mrw.interscience.wiley.com/emrw/9780470011812/eob/article/b2a10081/current/abstract">Roy's maximum root</a> statistics. 
+</li><li> Random field theory (RFT) for peaks and clusters, as well as False Discovery Rate (FDR).
 </li><li> Model formula rather than a design matrix for specifying the linear model.
-</li><li> Mixed effects models fitted by <a href="http://en.wikipedia.org/wiki/Reml">ReML</a>.
+</li><li>Mixed effects models fitted by <a href="http://en.wikipedia.org/wiki/Reml">ReML</a>.
 </li><li> Off-the-shelf Matlab graphics that are ready to publish.
 </li><li> FAST! everything loaded into memory.
-</li><li> Truly interactive analysis, no need for batch.
-</li><li> A mere 200K of code ...
-<p>
+</li><li>Truly interactive analysis, no need for batch.
+<li> A mere 200K of code ...</li>
+</ul>
+<p>Thanks to <a href="http://www.bic.mni.mcgill.ca/users/oliver/">Oliver Lyttelton</a> for suggesting the multivariate statistics, <a href="http://www.biostat.wisc.edu/People/faculty/chung.htm">Moo Chung</a> and <a href="http://www.psych.nyu.edu/phelpslab/new/people/catherine_hartley.htm">Cate Hartley</a> for help with FreeSurfer, <a href="http://www.bic.mni.mcgill.ca/~boris/">Boris Bernhardt</a> for helping with the mixed effects, and <a href="http://www2.bic.mni.mcgill.ca/research/people/alumni/profile_emmdue000">Emma Duerden</a> for constant feedback that has really improved the package.</p>
 
-Thanks to <a href="http://www.bic.mni.mcgill.ca/users/oliver/">Oliver Lyttelton</a> for suggesting the multivariate statistics, <a href="http://www.biostat.wisc.edu/People/faculty/chung.htm">Moo Chung</a> and <a href="http://www.psych.nyu.edu/phelpslab/new/people/catherine_hartley.htm">Cate Hartley</a> for help with FreeSurfer, <a href="http://www.bic.mni.mcgill.ca/~boris/">Boris Bernhardt</a> for helping with the mixed effects, and <a href="http://www2.bic.mni.mcgill.ca/research/people/alumni/profile_emmdue000">Emma Duerden</a> for constant feedback that has really improved the package.</p><p>
-
-</p><hr>
+</br>
+</br>
 <h3>User applications</h3>
 
-</li><li><a href="http://www.biostat.wisc.edu/People/faculty/chung.htm">Moo Chung</a> has used SurfStat for <a href="http://www.stat.wisc.edu/~mchung/research/amygdala/">Amygdala Surface Modeling</a> (see the last section).
+<li> <a href="http://www.biostat.wisc.edu/People/faculty/chung.htm">Moo Chung</a> has used SurfStat for <a href="http://www.stat.wisc.edu/~mchung/research/amygdala/">Amygdala Surface Modeling</a> (see the last section).
 
-</li><li><a href="http://www.bic.mni.mcgill.ca/~boris/">Boris Bernhardt</a>  has used SurfStat for cortical thickness in temporal lobe epilepsy (see the end of his web page).
+<li> <a href="http://www.bic.mni.mcgill.ca/~boris/">Boris Bernhardt</a>  has used SurfStat for cortical thickness in temporal lobe epilepsy (see the end of his web page).
 
 
-<hr>
+</br>
+</br>
 <h3>Contents</h3>
 
-</li><li><a href="#install">Installation</a>
-</li><li><a href="#help">Documentation and help</a>
-</li><li><a href="#view">Viewing the data</a>
-</li><li><a href="#readsurf">Reading the surface data</a>
-</li><li><a href="#readthick">Reading the cortical thickness data</a>
-</li><li><a href="#PCA">Principal Components Analysis</a>
-</li><li><a href="#model">Model Formula</a>
-</li><li><a href="#ICBMagain">Fitting the model</a>
-</li><li><a href="#m-f">Main effect for gender</a>
-</li><li><a href="#age">Main effect for age</a>
-</li><li><a href="#interaction">Interaction</a>
-</li><li><a href="#F">F statistics</a>
-</li><li><a href="#connectivity">Connectivity</a>
-</li><li><a href="#roi">ROI analysis</a>
-</li><li><a href="#v2s">Volume to surface and vice-versa</a>
-</li><li><a href="#mixed">Mixed effects, a.k.a. longitudinal data, a.k.a. repeated measures</a>
-</li><li><a href="#map">Memory mapping</a>
-</li><li><a href="#smooth">Smoothing</a>
-</li><li><a href="#multi">Multivariate data statistical analysis</a>
-</li><li><a href="#vbm">VBM data</a>
-</li><li><a href="#dbm">DBM data</a>
-</li><li><a href="#pet">PET data</a>
-</li><li><a href="#pet2">PET data: more elaborate linear models</a>
-</li><li><a href="#future">Future features</a>
-</li><li><a href="#references">References for random field theory</a>
+<li><a href="#install">Installation</a>
+<li><a href="#help">Documentation and help</a>
+<li><a href="#view">Viewing the data</a>
+<li><a href="#readsurf">Reading the surface data</a>
+<li><a href="#readthick">Reading the cortical thickness data</a>
+<li><a href="#PCA">Principal Components Analysis</a>
+<li><a href="#model">Model Formula</a>
+<li><a href="#ICBMagain">Fitting the model</a>
+<li><a href="#m-f">Main effect for gender</a>
+<li><a href="#age">Main effect for age</a>
+<li><a href="#interaction">Interaction</a>
+<li><a href="#F">F statistics</a>
+<li><a href="#connectivity">Connectivity</a>
+<li><a href="#roi">ROI analysis</a>
+<li><a href="#v2s">Volume to surface and vice-versa</a>
+<li><a href="#mixed">Mixed effects, a.k.a. longitudinal data, a.k.a. repeated measures</a>
+<li><a href="#map">Memory mapping</a>
+<li><a href="#smooth">Smoothing</a>
+<li><a href="#multi">Multivariate data statistical analysis</a>
+<li><a href="#vbm">VBM data</a>
+<li><a href="#dbm">DBM data</a>
+<li><a href="#pet">PET data</a>
+<li><a href="#pet2">PET data: more elaborate linear models</a>
+<li><a href="#future">Future features</a>
+<li><a href="#references">References for random field theory</a>
 
 <hr>
 <a name="install"></a>
 <h3>Installation</h3>
 
-</li><li> Unzip the contents of  <a href="https://galton.uchicago.edu/faculty/InMemoriam/worsley/research/surfstat/surfstat.zip">surfstat.zip</a> into a directory
+<li> Unzip the contents of  <a href="https://galton.uchicago.edu/faculty/InMemoriam/worsley/research/surfstat/surfstat.zip">surfstat.zip</a> into a directory
 called e.g. <code>C:\Program Files\MATLAB\R2006a\toolbox\local/surfstat/</code>.
-</li><li> Go to the Matlab window and click <b>File --&gt; Set Path... ---&gt; Add Folder ... ---&gt;</b> <code>C:\Program Files\MATLAB\R2006a\toolbox\local/surfstat/</code> <b>--&gt; OK --&gt; Save</b>.
+<li> Go to the Matlab window and click <b>File --&gt; Set Path... ---&gt; Add Folder ... ---&gt;</b> <code>C:\Program Files\MATLAB\R2006a\toolbox\local/surfstat/</code> <b>--&gt; OK --&gt; Save</b>.
 
 <hr>
 <a name="help"></a>
@@ -118,10 +121,10 @@ or you can <a href="http://www.math.mcgill.ca/keith">email</a> me - I love to ge
 <h3>Viewing the data</h3>
 
 There is a FreeSurfer example at the end of this section, but throughout the rest of the web page, we shall analyse 147 subjects from the ICBM data base. The data is stored in <a href="http://wiki.bic.mni.mcgill.ca/index.php/ObjectFiles">MNI object</a> files. The scientific questions are not very exciting, but I have chosen them just to illustrate the ideas:
-</li><li><a href="#m-f"> Is cortical thickness related to gender?</a>
-</li><li><a href="#age"> Is cortical thickness related to age?</a>
-</li><li><a href="#interaction"> Does the age effect depend on gender?</a>
-</li><li><a href="#connectivity"> Does cortical thickness show any "functional" connectivity, and does the connectivity  depend on age or gender?</a> <p>
+<li><a href="#m-f"> Is cortical thickness related to gender?</a>
+<li><a href="#age"> Is cortical thickness related to age?</a>
+<li><a href="#interaction"> Does the age effect depend on gender?</a>
+<li><a href="#connectivity"> Does cortical thickness show any "functional" connectivity, and does the connectivity  depend on age or gender?</a> <p>
 First let's read in one subject whose id is 100:
 </p><xmp>
 s100 = SurfStatReadSurf( {...
@@ -686,14 +689,14 @@ SurfStatView( qval, avsurf, 'Males-females removing age' );
 </xmp>
 <a href="SurfStat_files/Qm-f.jpg"><img src="SurfStat_files/tn_Qm-f.jpg" alt="[Click to enlarge image]" border="0"></a><p>
 Recall that:
-</p></li><li> RFT controls the probability of <i>ever</i> finding a false positive
+</p><li> RFT controls the probability of <i>ever</i> finding a false positive
      - you will <i>never</i> report a false positive, 19 times out of 20.
-</li><li> FDR controls the <i>proportion</i> of false positives amongst your discoveries
+<li> FDR controls the <i>proportion</i> of false positives amongst your discoveries
       - you will <i>always</i> report false positives, but not too many (1/20).
 <p>
-</p></li><li> RFT is useful for <i>confirmation</i> (e.g. scientific publication)
+</p><li> RFT is useful for <i>confirmation</i> (e.g. scientific publication)
       - you want to be sure that <i>all</i> your discoveries are real.
-</li><li> FDR is useful for <i>exploration</i> (e.g. drug discovery: costs are in $$$)
+<li> FDR is useful for <i>exploration</i> (e.g. drug discovery: costs are in $$$)
      - you want to make discoveries, but not too many bad ones.
 
 
@@ -1954,39 +1957,39 @@ Why are the mean dfs the same? In fact the fits of the models, <code>slm.SSE</co
 <a name="future"></a>
 <h3>Future features</h3>
 
-</li><li> Support for Gifti file format.
+<li> Support for Gifti file format.
 
-</li><li> F tests for mixed effects models.
+<li> F tests for mixed effects models.
 
-</li><li> Multivariate mixed effects models.
+<li> Multivariate mixed effects models.
 
-</li><li> About time to upgrade
+<li> About time to upgrade
 <a href="http://www.math.mcgill.ca/keith/fmristat/">
 FmriStat</a> ...
 
-</li><li> I would really appreciate any feed-back!
+<li> I would really appreciate any feed-back!
 
 <hr>
 <a name="references"></a>
 <h3>References for random field theory</h3>
 
-</li><li> Adler, R.J. and Taylor, J.E. (2007). <i>Random fields and geometry</i>. Springer.<p>
+<li> Adler, R.J. and Taylor, J.E. (2007). <i>Random fields and geometry</i>. Springer.<p>
 
-</p></li><li> Adler, R.J., Taylor, J.E. and Worsley, K.J. (2008). <a href="http://iew3.technion.ac.il/~radler/hrf.pdf"><i>Random fields, geometry, and their applications</i></a>. In preparation.<p>
+</p><li> Adler, R.J., Taylor, J.E. and Worsley, K.J. (2008). <a href="http://iew3.technion.ac.il/~radler/hrf.pdf"><i>Random fields, geometry, and their applications</i></a>. In preparation.<p>
 
-</p></li><li> Hagler, D.J., Saygin, A.P. and Sereno, M.I. (2006). Smoothing and cluster thresholding for cortical surface-based group analysis of fMRI data. <i>NeuroImage,</i> <b>33</b>:1093-1103.<p>
+</p><li> Hagler, D.J., Saygin, A.P. and Sereno, M.I. (2006). Smoothing and cluster thresholding for cortical surface-based group analysis of fMRI data. <i>NeuroImage,</i> <b>33</b>:1093-1103.<p>
 
-</p></li><li> Hayasaka, S., Phan, K.L.,  Liberzon, I.,  Worsley, K.J. and Nichols, T.E. (2004). Non-Stationary cluster
+</p><li> Hayasaka, S., Phan, K.L.,  Liberzon, I.,  Worsley, K.J. and Nichols, T.E. (2004). Non-Stationary cluster
 size inference with random field and permutation methods. <i>NeuroImage,</i> <b>22</b>:676-687.<p>
 
-</p></li><li>Taylor, J.E. and Adler, R.J. (2003), Euler characteristics for Gaussian fields on manifolds. <i>Annals of Probability,</i> <b>31</b>:533-563.<p>
+</p><li>Taylor, J.E. and Adler, R.J. (2003), Euler characteristics for Gaussian fields on manifolds. <i>Annals of Probability,</i> <b>31</b>:533-563.<p>
 
-</p></li><li>Taylor, J.E. and Worsley, K.J. (2007).
+</p><li>Taylor, J.E. and Worsley, K.J. (2007).
 <a href="http://www.math.mcgill.ca/keith/noniso/noniso.htm">Detecting sparse signal in random fields, with
 an application to brain mapping. </a>
 <i>Journal of the American Statistical Association</i>,  <b>102</b>:913-928.<p>
 
-</p></li><li>Worsley, K.J.,  Andermann, M., Koulis,
+</p><li>Worsley, K.J.,  Andermann, M., Koulis,
 T., MacDonald, D., and Evans, A.C. (1999).
 <a href="http://www.math.mcgill.ca/keith/bm98/bm98.abstract.html">
 Detecting changes in non-isotropic images. </a>
